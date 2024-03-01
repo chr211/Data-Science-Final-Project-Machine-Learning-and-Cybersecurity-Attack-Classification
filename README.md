@@ -20,7 +20,10 @@ The goal of my data science project was to predict the type of network attack gi
 ## Dataset
 I chose NF-UNSW-NB15-v2 which is the network flow data from network intrusion detection systems at https://staff.itee.uq.edu.au/marius/NIDS_datasets/#RA6
 A description is here https://research.unsw.edu.au/projects/unsw-nb15-dataset
-The dataset include features such as Source IP address
+
+The dataset include features such as:
+    
+    Source IP address
     Source port number,
     Destination IP address,
     Destination port number,
