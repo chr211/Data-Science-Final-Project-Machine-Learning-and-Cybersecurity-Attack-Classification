@@ -20,6 +20,26 @@ The goal of my data science project was to predict the type of network attack gi
 ## Dataset
 I chose NF-UNSW-NB15-v2 which is the network flow data from network intrusion detection systems at https://staff.itee.uq.edu.au/marius/NIDS_datasets/#RA6
 A description is here https://research.unsw.edu.au/projects/unsw-nb15-dataset
+The dataset include features such as Source IP address
+    Source port number
+    Destination IP address
+    Destination port number
+    Transaction protocol
+    Indicates to the state and its dependent protocol, e.g. ACC, CLO, CON, ECO, ECR, FIN, INT, MAS, PAR, REQ, RST, TST, TXD, URH, URN, and (-) (if not used state)
+    Record total duration
+    Source to destination transaction bytes 
+    Destination to source transaction bytes
+    Source to destination time to live value 
+    Destination to source time to live value
+    Source packets retransmitted or dropped 
+    Destination packets retransmitted or dropped
+    http, ftp, smtp, ssh, dns, ftp-data ,irc  and (-) if not much used service
+    Source bits per second
+    Destination bits per second
+    Source to destination packet count 
+    Destination to source packet count
+    and more.
+    
 There are 10 types of attacks I consider:
 ['Fuzzers', 'Benign', 'Exploits', 'DoS', 'Reconnaissance', 'Generic', 'Shellcode', 'Analysis', 'Backdoor', 'Worms']. Benign is actually the lack of any attack and represents the majority of the data set. The 44 features that represent network data are listed at the link above.
 
