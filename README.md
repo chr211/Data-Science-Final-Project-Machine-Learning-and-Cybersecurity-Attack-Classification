@@ -44,7 +44,9 @@ There are 10 types of attacks I consider:
 Of the 44 features, I used 42 to predict the 44th 'Attack' category. The benign data represented approximately 96% of the data, followed by Exploits. I removed the label category as it represented whether it was benign or not. The distribution of attacks look as follows:
 
 
-![Boxplot Outlier Detection](attacktypedistro1.jpg)
+![attack distro1](attacktypedistro1.jpg)
+![attack distro2](attacktypedistro2.jpg)
+
 
 
 
@@ -78,8 +80,9 @@ The elbow on the Scree plot displayed the Eigenvalues vs number of features. The
 
 
 Below is a heatmap that shows the correlation between features in magnitude (might be difficult to read here)
+![Heatmap](heatmap.png)
 
-<img width="519" alt="image" src="https://github.com/CSC380-SU23-UofArizona/final-project-chr211/assets/28885019/4abcfc4b-c6aa-4be7-bb9a-9d79dc1adffa">
+
 
 
 
@@ -103,12 +106,13 @@ The random forest classifier performed slightly better than the forward neural n
 
 Below is the confusion matrix for the RFC trained on all network data, the test accuracy was approximately .98 in most samples.
 
-<img width="689" alt="image" src="https://github.com/CSC380-SU23-UofArizona/final-project-chr211/assets/28885019/4f0a0e82-87db-4478-8d75-d3988c86fb9d">
+![Confusionmatrixalltrafficrfc](confusionmatrixpredict1.jpg)
+
+
 
 Below is the confusion matrix for the RFC trained on the set with benign removed. Notice it has more values off the diagonal. The test accuracy was approximately .8 in most samples.
 
-
-<img width="718" alt="image" src="https://github.com/CSC380-SU23-UofArizona/final-project-chr211/assets/28885019/2a8f4be6-894f-45b3-9084-d0eee138ca39">
+![ConfusionmatrixalltrafficrfcNOBENIGN](confusionmatrixpredict2.jpg)
 
 
 Comparatively, the random forest classifier outperformed the mlpclassifier for all common data sets used, (one sample RFC accuracy: .985, while MLPC accuracy was .755 on full data). After researching the differences between the models, RFC are easier to use on non-linear data because of less hyperparameters, compared with MLPC which take more time to determine the optimal values of learning rate and activation functions. MLPC are also more likely to overfit data, although I did not see this between my training and testing results. I will detail how I used each model and which data sets I used below. The final machine learning model I chose was a support vector machine. At present, I only trained it on the full data set. It outperforms the MLPClassifier by 20% accuracy points in some samples. It trails behind the random forest classifier by around 4% accuracy on various samples I used. Therefore, I would choose the random forest classifier for this application with the data sets that had no benign values and outlying values removed with z scores above 1. I would also choose the SVM model. I might be able to improve the performance of the MLPclassifier if I tuned the hyperparameters.
