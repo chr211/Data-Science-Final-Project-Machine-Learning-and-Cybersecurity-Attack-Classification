@@ -56,15 +56,15 @@ Of the 44 features, I used 42 to predict the 44th 'Attack' category. The benign 
 
 I began by removing any Nan or invalid data like empty data. I then removed any duplicates present. I encoded the IP addresses to integers for model processing. I convered all numeric data to 64 bit integers. I encoded the attack type strings to numbers between 0 and 9. I used 4 methods of outlier detection:
 
-1. Boxplot
-  ![outlieroutpackets](boxplotoutlierdetectoutpackets.jpg)
-2. Scatterplot
+1. Boxplot  
+   ![outlieroutpackets](boxplotoutlierdetectoutpackets.jpg)
+2. Scatterplot  
    ![attackscatter](attackvsinbytes2.jpg)
-3. Zscore
+3. Zscore  
    ![zscore](zscore.jpg)
+4. Isolation forest  
+   ![Isolationforest](isolationforest.jpg)
 
-4. Isolation forest
-  ![Isolationforest](isolationforest.jpg)
 I chose the Z score method for removing outliers from my data set for comparison 'data_outliers_gone'. I compared this with the data set that had the outliers left in, see results section. I found a Z score of 1 std from the mean provided the best results, but values of 2 and 3 also provided improvement.
 ## Feature Selection/Engineering
 I chose two methods of feature reduction: principle componant analysis and Chi-squared. PCA did not help much for this type of classification problem, but I left it in for reference. The second was a chi-squared reduced feature set. This method reduced the set by 
