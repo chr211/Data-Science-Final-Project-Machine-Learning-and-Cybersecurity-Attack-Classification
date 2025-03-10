@@ -44,7 +44,7 @@ There are 10 types of attacks I consider:
 Of the 44 features, I used 42 to predict the 44th 'Attack' category. The benign data represented approximately 96% of the data, followed by Exploits. I removed the label category as it represented whether it was benign or not. The distribution of attacks look as follows:
 
 
-<img width="491" alt="image" src="https://github.com/CSC380-SU23-UofArizona/final-project-chr211/assets/28885019/96ad44c7-cbf9-42ed-b907-9760a55b3817"><img width="179" alt="image" src="https://github.com/CSC380-SU23-UofArizona/final-project-chr211/assets/28885019/1c58910c-7c14-488e-8bbe-17764979a860">
+<img width="491" alt="image" src="https://github.com/Data-Science-Final-Project-Machine-Learning-and-Cybersecurity-Attack-Classification\boxplotoutlierdetect"><img width="179" alt="image" src="https://github.com/Data-Science-Final-Project-Machine-Learning-and-Cybersecurity-Attack-Classification\boxplotoutlierdetectoutpackets">
 
 
 
