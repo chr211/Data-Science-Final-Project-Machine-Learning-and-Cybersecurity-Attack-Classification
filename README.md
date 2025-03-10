@@ -57,25 +57,21 @@ Of the 44 features, I used 42 to predict the 44th 'Attack' category. The benign 
 I began by removing any Nan or invalid data like empty data. I then removed any duplicates present. I encoded the IP addresses to integers for model processing. I convered all numeric data to 64 bit integers. I encoded the attack type strings to numbers between 0 and 9. I used 4 methods of outlier detection:
 
 1. Boxplot
-   <img width="415" alt="image" src="https://github.com/CSC380-SU23-UofArizona/final-project-chr211/assets/28885019/92f4fa9e-ab8f-4101-9583-9cfac9307a27">
-
+  ![outlieroutpackets](boxplotoutlierdetectoutpackets.jpg)
 2. Scatterplot
-   <img width="398" alt="image" src="https://github.com/CSC380-SU23-UofArizona/final-project-chr211/assets/28885019/84059b34-667d-4dfd-b904-0b8749dd1e23">
-
+   ![attackscatter](attackvsinbytes2.jpg)
 3. Zscore
-   <img width="647" alt="image" src="https://github.com/CSC380-SU23-UofArizona/final-project-chr211/assets/28885019/09bf00a8-5211-49f3-beb8-c69b117a5a14">
-
+   ![zscore](zscore.jpg)
 
 4. Isolation forest
-   <img width="675" alt="image" src="https://github.com/CSC380-SU23-UofArizona/final-project-chr211/assets/28885019/0f4b4661-e2e0-49f4-aa9a-aea2b71b3542">
-
+  ![Isolationforest](isolationforest.jpg)
 I chose the Z score method for removing outliers from my data set for comparison 'data_outliers_gone'. I compared this with the data set that had the outliers left in, see results section. I found a Z score of 1 std from the mean provided the best results, but values of 2 and 3 also provided improvement.
 ## Feature Selection/Engineering
 I chose two methods of feature reduction: principle componant analysis and Chi-squared. PCA did not help much for this type of classification problem, but I left it in for reference. The second was a chi-squared reduced feature set. This method reduced the set by 
 finding which features were correlated and drop one of them from the set.
 
+![scree](pcascreeplot.jpg)
 
-<img width="539" alt="image" src="https://github.com/CSC380-SU23-UofArizona/final-project-chr211/assets/28885019/cd3239d2-067d-4871-a247-0555239967fd">
 The elbow on the Scree plot displayed the Eigenvalues vs number of features. The optimal number of features can be found by drawing a line where the data approximately becomes linear and the variance is minimized. This is around 8 features in this plot. 
 
 
