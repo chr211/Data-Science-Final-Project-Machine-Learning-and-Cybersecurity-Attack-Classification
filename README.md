@@ -15,7 +15,7 @@
   - [Limitations](#Limitations)
 ## Objective
 
-The goal of my data science project was to predict the type of network attack given 42 network variables out of 44 features (label is binary and represents benign or non benign, I removed this feature as not to bias the model). I used 3 machine learning models to categorize and predict the attack type. I trained each of them on various subsets of the total data set. This included the full set, only attack data, outlying value removed, optimized feature reduced subsets, and a few more. 
+The goal of my data science project was to predict the type of network attack given 42 network variables out of 44 features (label is binary and represents benign or non benign, I removed this feature as not to bias the model). I used 3 machine learning models to categorize and predict the attack type. I trained each of them on various subsets of the total data set. This included the full set, only attack data, outlying value removed, optimized feature reduced subsets, and a few more. For all data exploration, preprocessing, analysis, and visualizations, please refer to the Jupyter Notebook: [Christopher_OBrien_NWClassifier_Main_Project.ipynb](Christopher_OBrien_NWClassifier_Main_Project.ipynb).
 
 ## Dataset
 I chose NF-UNSW-NB15-v2 which is the network flow data from network intrusion detection systems at https://staff.itee.uq.edu.au/marius/NIDS_datasets/#RA6
